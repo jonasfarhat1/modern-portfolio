@@ -47,6 +47,11 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        portfolio: {
+          hero: "hsl(var(--hero-text))",
+          subtitle: "hsl(var(--subtitle-text))",
+          section: "hsl(var(--section-bg))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
