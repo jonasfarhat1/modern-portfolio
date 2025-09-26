@@ -24,17 +24,14 @@ export function Portfolio() {
     {
       name: "GitHub",
       icon: Github,
-      url: "https://github.com/yourusername",
     },
     {
       name: "LinkedIn", 
       icon: Linkedin,
-      url: "https://linkedin.com/in/yourusername",
     },
     {
       name: "Email",
       icon: Mail,
-      url: "mailto:your.email@example.com",
     },
   ];
 
@@ -70,16 +67,13 @@ export function Portfolio() {
             <p className="text-sm text-muted-foreground mb-4">Find me on</p>
             <div className="flex items-center space-x-4">
               {socialLinks.map((link) => (
-                <a
+                <button
                   key={link.name}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                   aria-label={link.name}
                 >
                   <link.icon className="h-5 w-5" />
-                </a>
+                </button>
               ))}
             </div>
           </div>
@@ -144,12 +138,9 @@ export function Portfolio() {
             </p>
             <p>
               <span className="font-medium text-portfolio-hero">Email:</span>{" "}
-              <a 
-                href="mailto:your.email@example.com" 
-                className="text-accent hover:underline transition-colors underline-offset-4"
-              >
+              <span className="text-accent">
                 your.email@example.com
-              </a>
+              </span>
             </p>
           </div>
         </section>
