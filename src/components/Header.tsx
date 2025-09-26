@@ -9,9 +9,9 @@ export function Header() {
         <div className="flex items-center space-x-8">
           <div className="flex items-center space-x-3">
             <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent/20 to-accent/10 border border-accent/20 flex items-center justify-center">
-              <span className="text-sm font-semibold text-accent">JD</span>
+              <span className="text-sm font-semibold text-accent">YN</span>
             </div>
-            <span className="text-lg font-semibold text-foreground">John Doe</span>
+            <span className="text-lg font-semibold text-foreground">Your Name</span>
           </div>
           
           <nav className="hidden md:flex items-center space-x-6">

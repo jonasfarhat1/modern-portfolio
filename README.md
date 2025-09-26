@@ -1,73 +1,163 @@
-# Welcome to your Lovable project
+# Portfolio Template - Clean & Minimal
 
-## Project info
+A beautiful, clean, and minimal portfolio template built with React, TypeScript, and Tailwind CSS. Perfect for developers, designers, and creatives who want a professional online presence.
 
-**URL**: https://lovable.dev/projects/0f2c9f9d-7167-44f3-a2ec-643e70aa9e17
+![Portfolio Template Preview](preview.png)
 
-## How can I edit this code?
+## ✨ Features
 
-There are several ways of editing your application.
+- **🌙 Dark/Light Mode** - Seamless theme switching
+- **📱 Responsive Design** - Looks great on all devices
+- **⚡ Fast & Modern** - Built with Vite and optimized for performance
+- **🎨 Customizable** - Easy to modify colors, content, and styling
+- **♿ Accessible** - Built with accessibility best practices
+- **🚀 Ready to Deploy** - One-click deployment to various platforms
 
-**Use Lovable**
+## 🛠️ Built With
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/0f2c9f9d-7167-44f3-a2ec-643e70aa9e17) and start prompting.
+- **React 18** - Modern UI library
+- **TypeScript** - Type-safe development
+- **Tailwind CSS** - Utility-first CSS framework
+- **Vite** - Lightning fast build tool
+- **Lucide React** - Beautiful icons
+- **Radix UI** - Accessible UI components
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🚀 Quick Start
 
-**Use your preferred IDE**
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/portfolio-template
+   cd portfolio-template
+   ```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+3. **Start development server**
+   ```bash
+   npm run dev
+   ```
 
-Follow these steps:
+4. **Open your browser**
+   Navigate to `http://localhost:8080`
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 📝 Customization
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Personal Information
 
-# Step 3: Install the necessary dependencies.
-npm i
+Update your personal information in `src/components/Portfolio.tsx`:
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```typescript
+// Update your name in the header
+<span className="text-lg font-semibold text-foreground">Your Name</span>
+
+// Update social links
+const socialLinks = [
+  {
+    name: "GitHub",
+    icon: Github,
+    url: "https://github.com/yourusername",
+  },
+  // ... add more social links
+];
 ```
 
-**Edit a file directly in GitHub**
+### Content Sections
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+1. **About Section** - Update your bio and background
+2. **Posts Section** - Add your blog posts or articles
+3. **Contact Section** - Update your contact information
 
-**Use GitHub Codespaces**
+### Styling
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+The design system is defined in:
+- `src/index.css` - CSS variables and design tokens
+- `tailwind.config.ts` - Tailwind configuration
 
-## What technologies are used for this project?
+### Colors
 
-This project is built with:
+Modify the color scheme by updating the CSS variables in `src/index.css`:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```css
+:root {
+  --accent: 220 100% 60%; /* Change this for your brand color */
+  /* ... other color variables */
+}
+```
 
-## How can I deploy this project?
+## 📁 Project Structure
 
-Simply open [Lovable](https://lovable.dev/projects/0f2c9f9d-7167-44f3-a2ec-643e70aa9e17) and click on Share -> Publish.
+```
+src/
+├── components/
+│   ├── Header.tsx          # Navigation header
+│   ├── Portfolio.tsx       # Main portfolio content
+│   ├── ThemeProvider.tsx   # Theme context
+│   ├── ThemeToggle.tsx     # Dark/light mode toggle
+│   └── ui/                 # Reusable UI components
+├── pages/
+│   ├── Index.tsx           # Home page
+│   └── NotFound.tsx        # 404 page
+├── hooks/
+│   └── use-mobile.tsx      # Mobile detection hook
+└── lib/
+    └── utils.ts            # Utility functions
+```
 
-## Can I connect a custom domain to my Lovable project?
+## 🚀 Deployment
 
-Yes, you can!
+This template can be deployed to various platforms:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### Vercel
+```bash
+npm install -g vercel
+vercel
+```
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+### Netlify
+```bash
+npm run build
+# Upload the dist/ folder to Netlify
+```
+
+### GitHub Pages
+1. Enable GitHub Pages in your repository settings
+2. Set up GitHub Actions for automatic deployment
+
+## 🎨 Design Philosophy
+
+This template follows these design principles:
+
+- **Minimalism** - Clean, uncluttered design
+- **Typography** - Excellent readability and hierarchy
+- **Accessibility** - WCAG compliant and keyboard navigable
+- **Performance** - Optimized for speed and SEO
+- **Flexibility** - Easy to customize and extend
+
+## 📄 License
+
+MIT License - feel free to use this template for your personal or commercial projects.
+
+## 🙏 Credits
+
+Built and developed by **Jonas Farhat**
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📞 Support
+
+If you have any questions or need help customizing the template, please open an issue on GitHub.
+
+---
+
+⭐ If you found this template helpful, please give it a star on GitHub!

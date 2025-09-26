@@ -5,17 +5,17 @@ export function Portfolio() {
   const posts = [
     {
       date: "Dec 15, 2024",
-      title: "Building Modern Web Apps with React and TypeScript",
+      title: "Getting Started with Modern Web Development",
       link: "#"
     },
     {
       date: "Dec 8, 2024", 
-      title: "The Art of Clean Code: Lessons Learned",
+      title: "Building Your First React Application",
       link: "#"
     },
     {
       date: "Nov 28, 2024",
-      title: "Design Systems That Actually Work",
+      title: "Introduction to TypeScript for Beginners",
       link: "#"
     },
   ];
@@ -24,17 +24,17 @@ export function Portfolio() {
     {
       name: "GitHub",
       icon: Github,
-      url: "https://github.com/johndoe",
+      url: "https://github.com/yourusername",
     },
     {
       name: "LinkedIn", 
       icon: Linkedin,
-      url: "https://linkedin.com/in/johndoe",
+      url: "https://linkedin.com/in/yourusername",
     },
     {
       name: "Email",
       icon: Mail,
-      url: "mailto:john@example.com",
+      url: "mailto:your.email@example.com",
     },
   ];
 
@@ -53,17 +53,16 @@ export function Portfolio() {
               Hello and welcome to my little corner of the web.
             </p>
             <p>
-              I'm a 28-year-old developer, designer, and coffee enthusiast. 
-              I make a living from crafting digital experiences that people actually enjoy using.
+              I'm a passionate developer who loves creating digital experiences. 
+              I enjoy working with modern technologies and building things that make a difference.
             </p>
             <p>
-              Things that pique my interest are modern web technologies, 
-              open-source software, minimalist design, and the endless pursuit of writing clean, 
-              maintainable code. I believe in building things that matter.
+              Things that interest me include web development, open-source software, 
+              clean code, and continuous learning. This portfolio template showcases 
+              a clean, minimal design perfect for developers and creatives.
             </p>
             <p>
-              This website is a place for those things and others – mostly my thoughts 
-              on development, design, and the web!
+              Feel free to customize this template and make it your own!
             </p>
           </div>
 
@@ -117,18 +116,18 @@ export function Portfolio() {
           </h2>
           <div className="space-y-4 text-muted-foreground">
             <p>
-              I've been building for the web for over 5 years, working with everything 
-              from small startups to larger companies. I specialize in React, TypeScript, 
-              and modern web technologies.
+              This is a customizable portfolio template built with React, TypeScript, 
+              and Tailwind CSS. It features a clean, minimal design with dark/light mode support 
+              and smooth animations.
             </p>
             <p>
-              When I'm not coding, you'll find me reading about design, exploring new 
-              coffee shops, or contributing to open source projects. I believe in 
-              continuous learning and sharing knowledge with the community.
+              The template includes sections for personal introduction, blog posts, 
+              about information, and contact details. All content is easily customizable 
+              to match your personal brand and style.
             </p>
             <p>
-              I'm currently working on some exciting projects involving AI integration 
-              and developer tools. Always open to interesting collaborations!
+              Feel free to fork this project, customize it, and make it your own. 
+              It's designed to be a starting point for your personal portfolio website.
             </p>
           </div>
         </section>
@@ -140,17 +139,16 @@ export function Portfolio() {
           </h2>
           <div className="space-y-4 text-muted-foreground">
             <p>
-              I'm always interested in hearing about new projects and opportunities. 
-              Whether you want to discuss a potential collaboration or just say hello, 
-              feel free to reach out!
+              Interested in using this template? Feel free to customize it for your own portfolio. 
+              You can find the source code and documentation on GitHub.
             </p>
             <p>
               <span className="font-medium text-portfolio-hero">Email:</span>{" "}
               <a 
-                href="mailto:john@example.com" 
+                href="mailto:your.email@example.com" 
                 className="text-accent hover:underline transition-colors underline-offset-4"
               >
-                john@example.com
+                your.email@example.com
               </a>
             </p>
           </div>
@@ -160,7 +158,7 @@ export function Portfolio() {
       {/* Footer */}
       <footer className="border-t border-border mt-20">
         <div className="max-w-3xl mx-auto px-6 py-8 flex items-center justify-between text-sm text-muted-foreground">
-          <p>© John Doe 2024. 🚀 Built with React & Tailwind</p>
+          <p>© Your Name 2024. Built and developed by Jonas Farhat</p>
         </div>
       </footer>
     </div>
