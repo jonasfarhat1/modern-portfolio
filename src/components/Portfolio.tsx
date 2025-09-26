@@ -1,139 +1,168 @@
-import { ThemeToggle } from "./ThemeToggle";
+import { Github, Linkedin, Mail, ExternalLink } from "lucide-react";
+import { Header } from "./Header";
 
 export function Portfolio() {
-  const projects = [
+  const posts = [
     {
-      title: "Project One",
-      description: "A modern web application built with React and TypeScript.",
-      tech: ["React", "TypeScript", "Tailwind CSS"],
+      date: "Dec 15, 2024",
+      title: "Building Modern Web Apps with React and TypeScript",
+      link: "#"
     },
     {
-      title: "Project Two", 
-      description: "An e-commerce platform with seamless user experience.",
-      tech: ["Next.js", "Node.js", "PostgreSQL"],
+      date: "Dec 8, 2024", 
+      title: "The Art of Clean Code: Lessons Learned",
+      link: "#"
     },
     {
-      title: "Project Three",
-      description: "A mobile-first design system and component library.",
-      tech: ["React Native", "Figma", "Storybook"],
+      date: "Nov 28, 2024",
+      title: "Design Systems That Actually Work",
+      link: "#"
+    },
+  ];
+
+  const socialLinks = [
+    {
+      name: "GitHub",
+      icon: Github,
+      url: "https://github.com/johndoe",
+    },
+    {
+      name: "LinkedIn", 
+      icon: Linkedin,
+      url: "https://linkedin.com/in/johndoe",
+    },
+    {
+      name: "Email",
+      icon: Mail,
+      url: "mailto:john@example.com",
     },
   ];
 
   return (
-    <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
-      <ThemeToggle />
+    <div className="min-h-screen bg-background text-foreground">
+      <Header />
       
-      <div className="max-w-2xl mx-auto px-6 py-16">
+      <main className="max-w-3xl mx-auto px-6 py-16">
         {/* Hero Section */}
-        <section className="mb-20">
-          <h1 className="text-5xl font-bold text-portfolio-hero mb-4 transition-colors">
-            John Doe
+        <section id="home" className="mb-16">
+          <h1 className="text-4xl font-bold text-portfolio-hero mb-6 transition-colors">
+            Hello there!
           </h1>
-          <p className="text-xl text-portfolio-subtitle mb-6 transition-colors">
-            Full Stack Developer & UI/UX Designer
-          </p>
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            I create digital experiences that are both beautiful and functional. 
-            Passionate about clean code, intuitive design, and solving complex problems.
-          </p>
-        </section>
+          <div className="space-y-4 text-base text-muted-foreground leading-relaxed">
+            <p>
+              Hello and welcome to my little corner of the web.
+            </p>
+            <p>
+              I'm a 28-year-old developer, designer, and coffee enthusiast. 
+              I make a living from crafting digital experiences that people actually enjoy using.
+            </p>
+            <p>
+              Things that pique my interest are modern web technologies, 
+              open-source software, minimalist design, and the endless pursuit of writing clean, 
+              maintainable code. I believe in building things that matter.
+            </p>
+            <p>
+              This website is a place for those things and others – mostly my thoughts 
+              on development, design, and the web!
+            </p>
+          </div>
 
-        {/* About Section */}
-        <section className="mb-20">
-          <h2 className="text-3xl font-semibold mb-6 text-portfolio-hero transition-colors">
-            About
-          </h2>
-          <div className="space-y-4 text-muted-foreground">
-            <p>
-              With over 5 years of experience in web development, I specialize in creating 
-              modern, responsive applications using the latest technologies. I believe in 
-              writing clean, maintainable code and designing user-centered experiences.
-            </p>
-            <p>
-              When I'm not coding, you can find me exploring new design trends, 
-              contributing to open source projects, or sharing knowledge with the developer community.
-            </p>
+          <div className="mt-8">
+            <p className="text-sm text-muted-foreground mb-4">Find me on</p>
+            <div className="flex items-center space-x-4">
+              {socialLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  aria-label={link.name}
+                >
+                  <link.icon className="h-5 w-5" />
+                </a>
+              ))}
+            </div>
           </div>
         </section>
 
-        {/* Projects Section */}
-        <section className="mb-20">
-          <h2 className="text-3xl font-semibold mb-8 text-portfolio-hero transition-colors">
-            Projects
+        {/* Posts Section */}
+        <section id="posts" className="mb-16">
+          <h2 className="text-2xl font-semibold mb-8 text-portfolio-hero transition-colors">
+            Posts
           </h2>
-          <div className="space-y-8">
-            {projects.map((project, index) => (
-              <div 
-                key={index}
-                className="p-6 rounded-lg bg-portfolio-section border border-border transition-all duration-300 hover:shadow-md"
-              >
-                <h3 className="text-xl font-semibold mb-3 text-portfolio-hero">
-                  {project.title}
-                </h3>
-                <p className="text-muted-foreground mb-4">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tech.map((tech, techIndex) => (
-                    <span 
-                      key={techIndex}
-                      className="px-3 py-1 text-sm bg-accent/10 text-accent rounded-full border border-accent/20"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+          <div className="space-y-6">
+            {posts.map((post, index) => (
+              <article key={index} className="flex items-start space-x-4 group">
+                <time className="text-sm text-muted-foreground font-mono min-w-[100px] pt-1">
+                  {post.date}
+                </time>
+                <div className="flex-1">
+                  <a 
+                    href={post.link}
+                    className="text-foreground hover:text-accent transition-colors group-hover:underline underline-offset-4"
+                  >
+                    {post.title}
+                  </a>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </section>
 
-        {/* Contact Section */}
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-portfolio-hero transition-colors">
-            Contact
+        {/* About Section */}
+        <section id="about" className="mb-16">
+          <h2 className="text-2xl font-semibold mb-6 text-portfolio-hero transition-colors">
+            About
           </h2>
           <div className="space-y-4 text-muted-foreground">
             <p>
-              Let's work together! I'm always open to discussing new opportunities 
-              and interesting projects.
+              I've been building for the web for over 5 years, working with everything 
+              from small startups to larger companies. I specialize in React, TypeScript, 
+              and modern web technologies.
             </p>
-            <div className="space-y-2">
-              <p>
-                <span className="font-medium text-portfolio-hero">Email:</span>{" "}
-                <a 
-                  href="mailto:john@example.com" 
-                  className="text-accent hover:underline transition-colors"
-                >
-                  john@example.com
-                </a>
-              </p>
-              <p>
-                <span className="font-medium text-portfolio-hero">LinkedIn:</span>{" "}
-                <a 
-                  href="https://linkedin.com/in/johndoe" 
-                  className="text-accent hover:underline transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  linkedin.com/in/johndoe
-                </a>
-              </p>
-              <p>
-                <span className="font-medium text-portfolio-hero">GitHub:</span>{" "}
-                <a 
-                  href="https://github.com/johndoe" 
-                  className="text-accent hover:underline transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  github.com/johndoe
-                </a>
-              </p>
-            </div>
+            <p>
+              When I'm not coding, you'll find me reading about design, exploring new 
+              coffee shops, or contributing to open source projects. I believe in 
+              continuous learning and sharing knowledge with the community.
+            </p>
+            <p>
+              I'm currently working on some exciting projects involving AI integration 
+              and developer tools. Always open to interesting collaborations!
+            </p>
           </div>
         </section>
-      </div>
+
+        {/* Contact Section */}
+        <section id="contact">
+          <h2 className="text-2xl font-semibold mb-6 text-portfolio-hero transition-colors">
+            Get in touch
+          </h2>
+          <div className="space-y-4 text-muted-foreground">
+            <p>
+              I'm always interested in hearing about new projects and opportunities. 
+              Whether you want to discuss a potential collaboration or just say hello, 
+              feel free to reach out!
+            </p>
+            <p>
+              <span className="font-medium text-portfolio-hero">Email:</span>{" "}
+              <a 
+                href="mailto:john@example.com" 
+                className="text-accent hover:underline transition-colors underline-offset-4"
+              >
+                john@example.com
+              </a>
+            </p>
+          </div>
+        </section>
+      </main>
+
+      {/* Footer */}
+      <footer className="border-t border-border mt-20">
+        <div className="max-w-3xl mx-auto px-6 py-8 flex items-center justify-between text-sm text-muted-foreground">
+          <p>© John Doe 2024. 🚀 Built with React & Tailwind</p>
+        </div>
+      </footer>
     </div>
   );
 }
